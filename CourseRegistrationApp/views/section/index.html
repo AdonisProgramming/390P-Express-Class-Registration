@@ -1,0 +1,29 @@
+<h2>
+    Section
+</h2>
+<table class="table">
+    <thead >
+    <tr>
+        <th>ID</th>
+        <th>Section Number</th>
+        <th>Class Location</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#sections}}
+    <tr>
+        <th scope="row">{{_id}}</th>
+        <td>{{section_number}}</td>
+        <td>{{class_location}}</td>
+        <td>{{professor.firstName}} {{professor.lastName}}</td>
+        <td><a href="/sections/{{id}}">Show</a></td>
+        <td><a href="/sections/{{id}}/edit">Edit</a></td>
+        <td><a href="/sections/{{id}}/delete">Delete</a></td>
+    </tr>
+    {{/sections}}
+    </tbody>
+</table>
+<br>
+<a class="btn btn-primary" href="/sections/create">Create</a>

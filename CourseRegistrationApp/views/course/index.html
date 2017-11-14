@@ -1,0 +1,29 @@
+
+<h2>
+    Courses
+</h2>
+<table class="table">
+    <thead >
+    <tr>
+        <th>ID</th>
+        <th>Course Name</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#courses}}
+    <tr>
+        <th scope="row">{{courseId}}</th>
+        <td>{{courseName}}</td>
+        <td><a href="/courses/{{_id}}">Show</a></td>
+        <td><a href="/courses/{{_id}}/edit">Edit</a></td>
+        <td><a href="/courses/{{_id}}/delete">Delete</a></td>
+    </tr>
+    {{/courses}}
+    </tbody>
+
+</table>
+<br>
+<a class="btn btn-primary" href="/courses/create">Create</a>
+

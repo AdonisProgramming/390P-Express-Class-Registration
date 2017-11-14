@@ -1,0 +1,28 @@
+
+<h2>
+    Professor
+</h2>
+
+<table class="table">
+    <thead >
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#professors}}
+    <tr>
+        <th scope="row">{{_id}}</th>
+        <td>{{firstName}}</td>
+        <td>{{lastName}}</td>
+        <td><a href="/professor/{{id}}">Show</a></td>
+        <td><a href="/professor/{{id}}/edit">Edit</a></td>
+        <td><a href="/professor/{{id}}/delete">Delete</a></td>
+    </tr>
+    {{/professors}}
+    </tbody>
+</table>
+<br>
+<a class="btn btn-primary" href="/professor/create">Create</a>
